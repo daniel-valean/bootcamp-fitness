@@ -3,16 +3,18 @@ const signupFormHandler = async function(event) {
   
     const emailEl = document.querySelector("#email-input-signup");
     const passwordEl = document.querySelector("#password-input-signup");
-    fetch("/api/user", {
+    fetch("/api/users", {
       method: "post",
       body: JSON.stringify({
-        email: emailEl.value,
-        password: passwordEl.value
+        email: emailEl.value.trim(),
+        password: passwordEl.value.trim()
       }),
       headers: { "Content-Type": "application/json" }
     })
-      .then(function() {
-        document.location.replace("/dashboard");
+      .then(function(res) {
+        if(res.ok)
+        {document.location.replace("/dashboard");}
+        else(alert("Password must be atleast 8 characters, 1 uppercase, and a symbol."))
       })
       .catch(err => console.log(err));
   };

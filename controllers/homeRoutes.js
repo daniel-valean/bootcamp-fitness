@@ -45,4 +45,11 @@ router.get('/signup', (req, res) => {
     res.render('signup');
   });
   
+  router.get('/dashboard', (req, res) => {
+    // Before rendering add-workout, we might want to perform a sequilize query
+    res.render('add-workouts');
+  });
+
+
 module.exports = router;
+
