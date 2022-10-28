@@ -9,7 +9,7 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect email or password, please try again 111' });
       return;
     }
 
@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect email or password, please try again 222' });
       return;
     }
 
@@ -45,6 +45,26 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
+});
+
+router.post('/', (req, res) => {
+  User.create({
+    email: req.body.email,
+    password: req.body.password
+  })
+    .then(dbUserData => {
+      req.session.save(() => {
+        req.session.userId = dbUserData.id;
+        req.session.email = dbUserData.email;
+        req.session.loggedIn = true;
+
+        res.json(dbUserData);
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
