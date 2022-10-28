@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Type extends Model {
@@ -16,7 +15,6 @@ Type.init(
         distance: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
         },
         pace: {
             type: DataTypes.INTEGER,
@@ -25,27 +23,26 @@ Type.init(
         duration: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
         },
         weight: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
+
         },
         sets: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
+
         },
         laps: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
+
         },
         reps: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            require: true,
+
         },
         workout_type: {
             type: DataTypes.ENUM,
@@ -69,7 +66,7 @@ Type.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Workout type',
+        modelName: 'Type',
     }
 );
 
