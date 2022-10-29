@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Workout extends Model {
@@ -21,19 +20,11 @@ Workout.init(
             referencesKey: 'id',
             foreignKey: true,
         },
-        createdAt: {
-            type: Sequelize.DATE,
-            field: 'created_at',
-        },
-        updatedAt: {
-            type: Sequelize.DATE,
-            field: 'updated_at'
-        }
     },
     {
 
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'workout',
