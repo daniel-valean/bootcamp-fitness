@@ -39,5 +39,3 @@ app.get('/', (req, res) => {
 })
 app.get('/login.handlebars', (req, res) => {
 })
-
-app.use(express.static("images"));
