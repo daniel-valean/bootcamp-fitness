@@ -34,3 +34,9 @@ sequelize.sync({ force: false}).then(() => {
     console.log(`App listening on port ${PORT}!`);
   });
 });
+
+app.get('/', (req, res) => {
+})
+
+app.get('/login.handlebars', (req, res) => {
+})
