@@ -71,4 +71,8 @@ router.post('/', (req, res) => {
     });
 });
 
+router.get('/view_workout', (req, res) => {
+  
+})
+
 module.exports = router;
