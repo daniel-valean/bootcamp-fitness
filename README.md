@@ -27,7 +27,7 @@ This is a full stack workout tracking application that combines a minimalistic a
 
 # Usage
 
-    Once the user opens up Bootcamp Fitness they will be prompted to enter credentials (email and password). The user will be able to choose which workout they completed for that day including any details of that workout. If incorrect credentials are provided the user will be shown a modal and redirected to the homepage. A user can view their workout summary. Have fun tracking your fitness goals!
+Once the user opens up Bootcamp Fitness they will be prompted to enter credentials (email and password). The user will be able to choose which workout they completed for that day including any details of that workout. If incorrect credentials are provided the user will be shown a modal and redirected to the homepage. A user can view their workout summary. Have fun tracking your fitness goals!
 
 # Demo
 
