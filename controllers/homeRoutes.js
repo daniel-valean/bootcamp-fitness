@@ -8,14 +8,12 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
-      order: [["name", "ASC"]]
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
 
     res.render('home', {
       users,
-      // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -43,8 +41,8 @@ router.get('/signup', (req, res) => {
   });
   
   router.get('/dashboard', (req, res) => {
-    // Before rendering add-workout, we might want to perform a sequilize query
-    res.render('add-workouts');
+    // Before rendering add-workout/home, we might want to perform a sequilize query
+    res.render('home');
   });
 
 
