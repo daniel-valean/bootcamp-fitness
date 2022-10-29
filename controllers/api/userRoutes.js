@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/login', async (req, res) => {
+router.post('/login', (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Verify the posted password with the password store in the database
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -38,12 +38,14 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
+    console.log ("before logout")
     req.session.destroy(() => {
       res
       .status(204)
       .json({ message: 'You are now logged out!'})
       .end();
     });
+    console.log ("after logout")
   } else {
     res.status(400).end();
   }
