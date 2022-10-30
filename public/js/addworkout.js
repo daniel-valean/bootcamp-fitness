@@ -1,15 +1,13 @@
-///JS needed for AddWorkout 
-
 // Wait for DOM to load
 $(document).ready(function () {
     // Event Listener -> Add workout button
     $('#add-a-workout').on('click', function () {
         // Capture user input
         let category = $('#category').val();
-        var distance = $('#distance').val();
-        var duration = $('#duration').val();
-        var workout_date = $('#date-input').val();
-        var details = $('#details').val();
+        let distance = $('#distance').val();
+        let duration = $('#duration').val();
+        let workout_date = $('#date-input').val();
+        let details = $('#details').val();
 
         // Validate user input
         if (distance === '') {
@@ -33,7 +31,7 @@ $(document).ready(function () {
         }
 
         // Format user input
-        var data = {
+        let data = {
             category: category,
             distance: distance,
             duration: duration,

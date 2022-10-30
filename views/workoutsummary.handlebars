@@ -1,5 +1,38 @@
-<div class="card">
-    <div class="card-header">
-        <h2>Workout Summary</h2>
+{{!-- Main Content Container --}}
+<main id="view-workouts">
+    <div id="container">
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 mt-2 column">
+                <div class="card mb-2">
+                    <div class="card-header text-center">
+                        Workouts to Complete
+                    </div>
+                    <!-- Partial Container: Incomplete Workouts -->
+                    <div class="card-body mb-4">
+                        {{#each workouts}}
+                        {{#unless completed}}
+                        {{> workout_todo completed=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-2 column">
+                <div class="card mb-2 completed-workouts-card">
+                    <div class="card-header" id="completed-workouts-header">
+                        Completed Workouts
+                    </div>
+                    {{!-- Partial Container: Completed Workouts --}}
+                    <div class="card-body mb-4">
+                        {{#each workouts}}
+                        {{#if completed}}
+                        {{> workout_completed completed=false}}
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</main>
