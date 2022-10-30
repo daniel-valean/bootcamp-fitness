@@ -1,55 +1,131 @@
-body {
-    display: flex;
+/* APPLIES TO BOTH index.handlebars (add_workout & view_workouts) FILES */
+
+@media screen and (max-width: 676px) {
+    .modal-dialog {
+        max-width: 400px;
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+
+    .login-button {
+        margin-left: 0px;
+    }
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.logo {
+    color: black;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+.nav-item {
+    color: black;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.bye-btn {
+    background-color: rgb(147, 80, 150);
+    color: white;
+}
+
+.bye-btn:hover {
+    font-weight: 400;
+}
+
+.card-header {
+    height: 50px;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #fc4a1a;
-    background: -webkit-linear-gradient(to right, #A8DADC, #457B9D);
-    background: linear-gradient(to right, #A8DADC, #457B9D)
+    font-weight: 300;
+    font-family: 'Shippori Mincho B1', serif;
 }
 
 .card {
-    border-radius: 10px;
-    padding: 35px 15px;
-    width: 400px
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: 'Shippori Mincho B1', serif;
 }
 
-.img {
-    max-height:100%; 
-    max-width:100%
+#sticky-footer {
+    color: black;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: small;
+    margin-top: 50px;
 }
 
-.abt {
-    font-size: 14px
+a:hover {
+    font-weight: 800;
+    text-decoration: underline;
+    color: black;
 }
 
-.form-check-label {
-    font-size: 12px
+/* APPLIES TO THE addworkout.handlebars FILE ONLY */
+
+.container {
+    width: 400px;
 }
 
-.btn-primary {
-    color: #00000;
-    background-color:#457B9D;
-    box-shadow: none;
+.modal-dialog {
+    text-align: center;
 }
 
-/*.btn-primary:focus {
-    color: #457B9D;
-    border-color: #0257d5;
-    box-shadow: none
-}*/
+#myModal {
+    margin-top: 100px;
+}
 
-/*.form-control {
-    display: block;
+.card-header-title {
+    justify-content: center;
+}
+
+main {
+    background-color: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #A8DADC, #457B9D);
+    background: linear-gradient(to right, #A8DADC, #457B9D);
     width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #fff;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #bdbdbd;
-    border-radius: 0.25rem;
-    transition: all .2s linear;
-}*/
+}
+
+.card-footer-item {
+    color: black;
+    font-weight: 600;
+}
+
+/* APPLIES TO THE view_workout.handlebars FILE ONLY */
+
+@media screen and (max-width: 650px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+body, html {
+    background-color: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #A8DADC, #457B9D);
+    background: linear-gradient(to right, #A8DADC, #457B9D);
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.column {
+    flex: 100%;
+}
+
+.complete-workout, .delete-workout {
+    float: right;
+}
