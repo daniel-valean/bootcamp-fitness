@@ -1,0 +1,149 @@
+<div class="card">
+    <img src="/assets/logo.png">
+    <form id="add-workout-form">
+        <div class="form-outline mb-3">
+            <label for="workout-name"></label><br>
+            <input type="text" placeholder="Workout Name" id="workout-name" />
+        </div>
+        <div class="form-outline mb-3">
+            <label for="workout-category">Select Workout Type</label><br>
+            <div class="control">
+                <div class="select">
+                    <select class="form-control mb-2" id="workout-category">
+                        <option>Running</option>
+                        <option>Weightlifting</option>
+                        <option>Walking</option>
+                        <option>Swimming</option>
+                        <option>Hiking</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-outline mb-3">
+            <label for="date-input" class="label">Date</label>
+            <div class="control">
+                <input class="form-control" type="date" value="" id="date-input" />
+            </div>
+        </div>
+
+        <div class="form-outline mb-2">
+            <label class="label">Duration</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="How long were you active?" id="duration" />
+            </div>
+        </div>
+        <div class="form-outline mb-2">
+            <label class="label">Distance</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="How far did you go?" id="duration" />
+            </div>
+        </div>
+        <div class="form-outline mb-2">
+            <label class="label">Weight</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Do you even lift bro?" id="duration" />
+            </div>
+        </div>
+
+        <!--<div class="form-outline mb-4">
+                        <div class="content">-->
+        <div class="form-outline mb-2">
+            <div class="control">
+                <label class="label">Sets</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="category">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-outline mb-2">
+                <div class="control">
+                    <label class="label">Reps</label>
+                    <div class="select">
+                        <select id="category">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="form-outline mb-2">
+                    <div class="card-content" id="form-top">
+                        <div class="content">-->
+        <div class="form-outline mb-2">
+            <div class="control">
+                <label class="label">Laps</label>
+                <div class="select">
+                    <select id="category">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+
+        <div class="form-outline mb-2">
+            <div class="control">
+                <label class="label">Pace</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="category">
+                            <option>Slow</option>
+                            <option>Moderate</option>
+                            <option>Medium</option>
+                            <option>Fast</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-outline mb-2">
+                <label class="label">Workout Details</label>
+                <div class="control">
+                    <textarea class="textarea"
+                        placeholder="Enter any other details about this workout. (i.e. reps, weight, etc.)"
+                        id="details"></textarea>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card-footer" id="add-a-workout">
+            <a href="#" type="submit" class="card-footer-item">Add Workout</a> <br />
+            <a href="#" type="submit" class="card-footer-item">Add Another Workout</a> <br />
+            <a href="#" type="submit" class="card-footer-item">Workout Summary</a> <br />
+            <a href="/logout" id="logout-btn" class="card-footer-item">Logout</a>
+        </div>
+    </form>
+</div>
