@@ -22,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    // If a session exists, redirect the request to the homepage
+    // If a session exists, redirect the request to the add workout page
     if (req.session.logged_in) {
         res.redirect('/');
         return;
@@ -41,10 +41,19 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-router.get('/dashboard', (req, res) => {
+// router.get('/dashboard', (req, res) => {
     // Before rendering add-workout/home, we might want to perform a sequilize query
-    res.render('addworkout');
-});
+//     res.render('addworkout');
+// });
+
+//get workouts from logged in user
+// router.get('/workout', (req, res) => {
+//     res.render('/addworkout');
+// })
+
+router.get('/view_workouts', (req, res) => {
+    res.render('view_workouts');
+})
 
 module.exports = router;
 

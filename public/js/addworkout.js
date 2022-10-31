@@ -1,4 +1,5 @@
-///JS needed for AddWorkout 
+//EXAMPLE FROM JOG LOGGER
+
 
 // Wait for DOM to load
 $(document).ready(function () {
@@ -6,10 +7,10 @@ $(document).ready(function () {
     $('#add-a-workout').on('click', function () {
         // Capture user input
         let category = $('#category').val();
-        var distance = $('#distance').val();
-        var duration = $('#duration').val();
-        var workout_date = $('#date-input').val();
-        var details = $('#details').val();
+        let distance = $('#distance').val();
+        let duration = $('#duration').val();
+        let workout_date = $('#date-input').val();
+        let details = $('#details').val();
 
         // Validate user input
         if (distance === '') {
@@ -33,10 +34,10 @@ $(document).ready(function () {
         }
 
         // Format user input
-        var data = {
+        let data = {
             category: category,
-            distance: distance,
             duration: duration,
+            distance: distance,
             workout_date: workout_date,
             details: details,
         };
@@ -57,37 +58,6 @@ $(document).ready(function () {
                 $("body.modal-open").removeAttr("style");
                 resetFields();
 
-            },
-            error: function () {
-                console.error('Error');
-            },
-        });
-    });
-
-    // Event Listener -> Complete workout buttons
-    $('.complete-workout').on('click', function (e) {
-        // Capture the workout's id and completed values
-        const id = $(e.target).attr('data-id');
-        const completed = $(e.target).attr('data-complete');
-
-        // Format data to send back to API
-        const data = {
-            id: id,
-            completed: completed,
-        };
-
-        // Send updated completed status back to API
-        $.ajax({
-            url: '/api/workouts',
-            method: 'PUT',
-            headers: {
-                Accept: 'application/json',
-                'Content-type': 'application/json',
-            },
-            data: JSON.stringify(data),
-            success: function (res) {
-                // If successful, reload the page to reflect the new status
-                location.reload('/view_workouts');
             },
             error: function () {
                 console.error('Error');

@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const {Workout} = require('../../models');
+const {Workout, Type} = require('../../models');
 
 router.post('/', (req, res) => {
-    console.log(req.session)
+    console.log(req.body)
     Workout.create(
         {...req.body,user_id:req.session.userId}
     )
         .then(dbWorkoutData => {
+
             res.json(dbWorkoutData);
         })
         .catch(err => {

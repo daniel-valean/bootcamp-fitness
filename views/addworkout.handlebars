@@ -1,149 +1,102 @@
-{{!--<main id="add-workout">
+<main id="add-workout">
     <div class="container">
-        <div class="row"
-    <form id="add-workout-form">
-        <div class="form-outline mb-3">
-            <label for="workout-name"></label><br>
-            <input type="text" placeholder="Workout Name" id="workout-name" />
-        </div>
---}}
-
-
-
-        {{!--<div class="form-outline mb-3">
-            <label for="workout-category">Select Workout Type</label><br>
-            <div class="control">
-                <div class="select">
-                    <select class="form-control mb-2" id="workout-category">
-                        <option>Running</option>
-                        <option>Weightlifting</option>
-                        <option>Walking</option>
-                        <option>Swimming</option>
-                        <option>Hiking</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-            </div>
-        </div>--}}
-
-
-
-        <div class="form-outline mb-3">
-            <label for="date-input" class="label">Date</label>
-            <div class="control">
-                <input class="form-control" type="date" value="" id="date-input" />
-            </div>
-        </div>
-
-        {{!--<div class="form-outline mb-2">
-            <label class="label">Duration</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="How long were you active?" id="duration" />
-            </div>
-        </div>--}}
-        {{!--<div class="form-outline mb-2">
-            <label class="label">Distance</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="How far did you go?" id="duration" />
-            </div>
-        </div>--}}
-        {{!--<div class="form-outline mb-2">
-            <label class="label">Weight</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Do you even lift bro?" id="duration" />
-            </div>
-        </div>
-
-        <!--<div class="form-outline mb-4">
-                        <div class="content">-->
-        <div class="form-outline mb-2">
-            <div class="control">
-                <label class="label">Sets</label>
-                <div class="control">
-                    <div class="select">
-                        <select id="category">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-outline mb-2">
-                <div class="control">
-                    <label class="label">Reps</label>
-                    <div class="select">
-                        <select id="category">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--<div class="form-outline mb-2">
+        <div class="row">
+            <div clas="col-12">
+                <div class="card" style="width: 400px;">
+                    <img src="assets/logo.png" class="card-img-top">
+                    {{!-- Header for Adding Workout --}}
+                    {{!-- Form to Add Workout --}}
                     <div class="card-content" id="form-top">
-                        <div class="content">-->
-        <div class="form-outline mb-2">
-            <div class="control">
-                <label class="label">Laps</label>
-                <div class="select">
-                    <select id="category">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                    </select>
+                        <div class="content">
+
+                            {{!--Category for Workout--}}
+                            <div class="field mt-3 mb-3">
+                                {{!--<label class="label mb-1">Select Workout Type</label>--}}
+                                <div class="control">
+                                    <select class="form-select" aria-label="category">
+                                        <option selected>Select Workout Type</option>
+                                        <option>Running</option>
+                                        <option>Weightlifting</option>
+                                        <option>Walking</option>
+                                        <option>Swimming</option>
+                                        <option>Hiking</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {{!-- Duration Input--}}
+                            <div class="field mb-3">
+                                <label class="label">Duration</label>
+                                <div class="control">
+                                    <input class="input" type="text"
+                                        {{!--placeholder="How long did you do this excercise for?" id="duration" />--}}
+                                    id="duration">
+                                </div>
+                            </div>
+
+
+
+                            {{!-- Distance Input--}}
+                            <div class="field mb-3">
+                                <label class="label">Distance</label>
+                                <div class="control">
+                                    <input class="input" type="text"
+                                        {{!--placeholder="How far did you go? If distance is not a factor, enter 0."
+                                        --}} id="distance">
+                                </div>
+                            </div>
+
+                            {{!-- Workout Date --}}
+                            <div class="field mb-3">
+                                <label class="label">Date</label>
+                                <div class="control mb-3">
+                                    <input class="form-control mb-3" type="date" value="" id="workout_date" />
+                                </div>
+                            </div>
+
+                            <!--Details Input-->
+                            <div class="field">
+                                <label for="details">Workout Details</label>
+                                <textarea class="form-control" id="details" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Add Workout Button-->
+                    <div class="card-footer text-center">
+                        <button type="button" id="add-a-workout" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
+                            Workout</button>
+
+                        <!--Modal for Adding Workout-->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!--Modal Content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <p class="modal-title">You have added your workout!</p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>What would you like to do next?</p>
+                                        <a class="btn close_modal pt-1 bye-btn" href="/addworkout" role="button">Add
+                                            Another Workout</a>
+                                        <a class="btn close_modal pt-1 bye-btn" href="/workoutsummary"
+                                            role="button">View
+                                            Workouts</a>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--</div>-->
-
-        <div class="form-outline mb-2">
-            <div class="control">
-                <label class="label">Pace</label>
-                <div class="control">
-                    <div class="select">
-                        <select id="category">
-                            <option>Slow</option>
-                            <option>Moderate</option>
-                            <option>Medium</option>
-                            <option>Fast</option>
-                        </select>
-                    </div>
-                </div>
-            </div>--}}
-
-            <div class="form-outline mb-2">
-                <label class="label">Workout Details</label>
-                <div class="control">
-                    <textarea class="textarea"
-                        placeholder="Enter any other details about this workout. (i.e. reps, weight, etc.)"
-                        id="details"></textarea>
-                </div>
-            </div>
 
 
         </div>
@@ -156,4 +109,4 @@
     </form>
 </div>
 
-<script 
+
