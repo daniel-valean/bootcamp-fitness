@@ -1,3 +1,4 @@
+const url = "https://api.quotable.io/random?tags=motivational";
 const loginFormHandler = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
@@ -22,6 +23,24 @@ const loginFormHandler = async (event) => {
     }
 };
 
+
+
 document
     .querySelector('#login-btn')
     ?.addEventListener('click', loginFormHandler);
+
+
+// -----------------------Quote JS
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
+
+let getQuote = () => {
+    fetch('https://api.quotable.io/random?tags=motivational')
+        .then((data) => data.json())
+        .then((item) => {
+            quote.innerText = item.content;
+            author.innerText = item.author;
+        });
+};
+
+window.addEventListener("load", getQuote);

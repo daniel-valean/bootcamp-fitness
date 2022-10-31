@@ -11,6 +11,10 @@ body {
   font-weight: 400;
 }
 
+#quote {
+  text-align: left;
+}
+
 .navbar {
   border-bottom: 1px solid black;
   background-color: white;
@@ -55,6 +59,10 @@ button {
 .img {
   max-height: 100%;
   max-width: 100%;
+}
+
+.contributors {
+  margin-bottom: 2px;
 }
 
 #sticky-footer {
@@ -157,6 +165,10 @@ a:hover {
 }
 
 .modal-dialog {
+  text-align: center;
+}
+
+.modal-title {
   text-align: center;
 }
 
