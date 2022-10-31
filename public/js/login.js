@@ -29,7 +29,6 @@ document
     .querySelector('#login-btn')
     ?.addEventListener('click', loginFormHandler);
 
-
 // -----------------------Quote JS
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");

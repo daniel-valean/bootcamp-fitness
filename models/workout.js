@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
 class Workout extends Model {
 
 }
@@ -16,10 +17,21 @@ Workout.init(
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: 'user',
-            referencesKey: 'id',
-            foreignKey: true,
+            references: {model: 'user', key: 'id'},
         },
+workout_date: {
+    type: DataTypes.DATE,
+    allowNull: false
+},
+category: DataTypes.STRING,
+distance: DataTypes.STRING,
+duration: DataTypes.STRING,
+details: DataTypes.TEXT,
+completed: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false
+}
     },
     {
 
@@ -32,3 +44,24 @@ Workout.init(
 );
 
 module.exports = Workout;
+
+// Define workouts model
+// module.exports = (sequelize, DataTypes) => {
+//     const Workout = sequelize.define('Workout', {
+//         workout_date: {
+//             type: DataTypes.DATE,
+//             allowNull: false
+//         },
+//         category: DataTypes.STRING,
+//         distance: DataTypes.STRING,
+//         duration: DataTypes.STRING,
+//         details: DataTypes.TEXT,
+//         completed: {
+//             type: DataTypes.BOOLEAN,
+//             allowNull: false,
+//             defaultValue: false
+//         }
+//     });
+
+//     return Workout;
+// };

@@ -47,25 +47,26 @@
                                 </div>
                             </div>
 
-                            {{!-- Date Input --}}
+                            {{!-- Workout Date --}}
                             <div class="field mb-3">
                                 <label class="label">Date</label>
                                 <div class="control mb-3">
-                                    <input class="form-control mb-3" type="date" value="" id="date-input" />
+                                    <input class="form-control mb-3" type="date" value="" id="workout_date" />
                                 </div>
                             </div>
 
                             <!--Details Input-->
                             <div class="field">
-                                <label for="workout-details">Workout Details</label>
-                                <textarea class="form-control" id="workout-details" rows="3"></textarea>
+                                <label for="details">Workout Details</label>
+                                <textarea class="form-control" id="details" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
 
                     <!--Add Workout Button-->
                     <div class="card-footer text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
+                        <button type="button" id="add-a-workout" class="btn btn-primary" data-toggle="modal"
+                            data-target="#myModal">Add
                             Workout</button>
 
                         <!--Modal for Adding Workout-->
@@ -82,6 +83,7 @@
                                         <p>What would you like to do next?</p>
                                         <a class="btn close_modal pt-1 bye-btn" href="/addworkout" role="button">Add
                                             Another Workout</a>
+
                                         <a class="btn close_modal pt-1 bye-btn" href="/view_workouts" role="button">View
                                             Workouts</a>
                                     </div>
@@ -96,6 +98,21 @@
                 </div>
             </div>
         </div>
-    </div>
-    {{>footer}}
+        <<<<<<< HEAD </div>
+            {{>footer}}
 </main>
+=======
+
+
+</div>
+<div class="card-footer" id="add-a-workout">
+    <a href="#" type="submit" class="card-footer-item">Add Workout</a> <br />
+    <a href="#" type="submit" class="card-footer-item">Add Another Workout</a> <br />
+    <a href="#" type="submit" class="card-footer-item">Workout Summary</a> <br />
+    <a href="/logout" id="logout-btn" class="card-footer-item">Logout</a>
+</div>
+</form>
+</div>
+
+
+>>>>>>> 91833bca91afa778f40a3393cb55d052272c2350

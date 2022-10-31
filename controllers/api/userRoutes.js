@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
 
         // Create session variables based on the logged in user
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.userId = userData.id;
             req.session.loggedIn = true;
 
             res.json({user: userData, message: 'You are now logged in!'});
@@ -67,5 +67,9 @@ router.post('/', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+router.get('/workouts', (req, res) => {
+  res.render('workout-completed');
+  });
 
 module.exports = router;
