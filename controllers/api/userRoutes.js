@@ -68,4 +68,8 @@ router.post('/', (req, res) => {
         });
 });
 
+router.get('/workouts', (req, res) => {
+  res.render('workout-completed');
+  });
+
 module.exports = router;
