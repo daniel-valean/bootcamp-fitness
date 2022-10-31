@@ -1,7 +1,9 @@
 //res render// 
 const router = require('express').Router();
-const {User} = require('../models');
+const {User, Workout} = require('../models');
+const { create } = require('../models/user');
 const withAuth = require('../utils/auth');
+const Sequelize = require('sequelize');
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
@@ -51,8 +53,40 @@ router.get('/signup', (req, res) => {
 //     res.render('/addworkout');
 // })
 
-router.get('/view_workouts', (req, res) => {
-    res.render('view_workouts');
+router.get('/view_workouts', async (req, res) => {
+    const workoutData = await Workout.findAll({
+        where: {
+            user_id: req.session.userId
+        },
+        attributes: [
+            [Sequelize.fn('MAX', Sequelize.col('workout_date')), 'workout_date'],
+            [Sequelize.fn('SUM', Sequelize.col('distance')), 'distance'],
+            [Sequelize.fn('SUM', Sequelize.col('duration')), 'duration']
+        ],
+        group: ['user_id']
+    })
+
+    const workout = await workoutData.map(workout => workout.get({plain: true}));
+
+  //  const userData= await User.findByPk(req.session.userId,{
+    //    include:[{ model:Workout,
+        
+
+
+// }],
+// attributes: [
+  //  [Sequelize.fn('SUM', Sequelize.col('workout.distance')), 'total_distance']
+//],
+ //group: [
+   // 'user.id'
+//]
+  //  })
+   // const user = userData.get({plain: true});
+    console.log(workout)
+    res.render('view_workouts', {
+        //user,
+        ...workout[0],
+        logged_in: req.session.logged_in,});
 })
 
 module.exports = router;
