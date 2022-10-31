@@ -9,7 +9,7 @@ $(document).ready(function () {
         let category = $('#category').val();
         let distance = $('#distance').val();
         let duration = $('#duration').val();
-        let workout_date = $('#date-input').val();
+        let workout_date = $('#workout_date').val();
         let details = $('#details').val();
 
         // Validate user input
