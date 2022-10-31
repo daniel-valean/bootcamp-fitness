@@ -1,0 +1,208 @@
+/* Login Page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #a8dadc, #457b9d);
+  background: linear-gradient(to right, #a8dadc, #457b9d);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.navbar {
+  border-bottom: 1px solid black;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 35px 15px;
+  width: 400px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+textarea,
+select,
+p,
+category,
+a,
+label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#sticky-footer {
+  color: black;
+  font-family: "Shippori Mincho B1", serif;
+  font-size: small;
+  margin-top: 50px;
+}
+
+.workout-card {
+  border-radius: 10px;
+  padding: 35px 15px;
+  width: 400px;
+  height: flex;
+}
+
+.abt {
+  font-size: 14px;
+}
+
+.form-check-label {
+  font-size: 12px;
+}
+
+.btn-primary {
+  color: #00000;
+  background-color: #457b9d;
+  box-shadow: none;
+}
+
+/* APPLIES TO BOTH index.handlebars (add_workout & view_workouts) FILES */
+
+@media screen and (max-width: 676px) {
+  .modal-dialog {
+    max-width: 400px;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .login-button {
+    margin-left: 0px;
+  }
+}
+
+.logo {
+  color: black;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+.navbar-toggler {
+  color: black;
+}
+
+.nav-item {
+  color: black;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+.bye-btn {
+  background-color: rgb(147, 80, 150);
+  color: white;
+}
+
+.bye-btn:hover {
+  font-weight: 400;
+}
+
+.card-header {
+  height: 50px;
+  justify-content: center;
+  font-weight: 300;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+/* Login Page  */
+.card-body {
+  border-radius: 10px;
+  padding: 35px 15px;
+  width: 400px;
+}
+
+.card {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+/* All Pages */
+
+a:hover {
+  font-weight: 800;
+  text-decoration: underline;
+  color: black;
+}
+
+/* Add Workout Handlebars */
+
+.container {
+  width: 400px;
+}
+
+.modal-dialog {
+  text-align: center;
+}
+
+#myModal {
+  margin-top: 100px;
+}
+
+.card-header-title {
+  justify-content: center;
+}
+
+main {
+  background-color: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #a8dadc, #457b9d);
+  background: linear-gradient(to right, #a8dadc, #457b9d);
+  width: 100%;
+}
+
+.card-footer-item {
+  color: black;
+  font-weight: 600;
+}
+
+/* APPLIES TO THE view_workout.handlebars FILE ONLY */
+
+@media screen and (max-width: 650px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+#container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 100%;
+}
+
+.complete-workout,
+.delete-workout {
+  float: right;
+}
