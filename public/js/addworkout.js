@@ -1,3 +1,6 @@
+//EXAMPLE FROM JOG LOGGER
+
+
 // Wait for DOM to load
 $(document).ready(function () {
     // Event Listener -> Add workout button
