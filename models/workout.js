@@ -16,9 +16,7 @@ Workout.init(
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            references: 'user',
-            referencesKey: 'id',
-            foreignKey: true,
+            references: {model: 'user', key: 'id'},
         },
     },
     {
