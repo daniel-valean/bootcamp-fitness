@@ -16,18 +16,16 @@
                                     <select class="form-select" aria-label="category">
                                         <option selected>Select Workout Type</option>
                                         <option>Running</option>
-                                        <option>Weightlifting</option>
                                         <option>Walking</option>
                                         <option>Swimming</option>
                                         <option>Hiking</option>
-                                        <option>Other</option>
                                     </select>
                                 </div>
                             </div>
 
                             {{!-- Duration Input--}}
                             <div class="field mb-3">
-                                <label class="label">Duration</label>
+                                <label class="label">Duration (in minutes)</label>
                                 <div class="control">
                                     <input class="input" type="text"
                                         {{!--placeholder="How long did you do this excercise for?" id="duration" />--}}
@@ -39,7 +37,7 @@
 
                             {{!-- Distance Input--}}
                             <div class="field mb-3">
-                                <label class="label">Distance</label>
+                                <label class="label">Distance (in miles)</label>
                                 <div class="control">
                                     <input class="input" type="text"
                                         {{!--placeholder="How far did you go? If distance is not a factor, enter 0."
@@ -65,7 +63,8 @@
 
                     <!--Add Workout Button-->
                     <div class="card-footer text-center">
-                        <button type="button" id="add-a-workout" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
+                        <button type="button" id="add-a-workout" class="btn btn-primary" data-toggle="modal"
+                            data-target="#myModal">Add
                             Workout</button>
 
                         <!--Modal for Adding Workout-->
@@ -76,14 +75,15 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <p class="modal-title">You have added your workout!</p>
+                                        {{!--<p class="modal-title">You have added your workout!</p>--}}
                                     </div>
                                     <div class="modal-body">
-                                        <p>What would you like to do next?</p>
-                                        <a class="btn close_modal pt-1 bye-btn" href="/addworkout" role="button">Add
-                                            Another Workout</a>
-                                        <a class="btn close_modal pt-1 bye-btn" href="/view_workouts"
-                                            role="button">View
+                                        <p>You have added your workout!</p>
+                                        {{!--<a class="btn close_modal pt-1 bye-btn" href="/addworkout"
+                                            role="button">Add
+                                            Another Workout</a>--}}
+
+                                        <a class="btn close_modal pt-1 bye-btn" href="/view_workouts" role="button">View
                                             Workouts</a>
                                     </div>
                                     <div class="modal-footer">
@@ -97,16 +97,14 @@
                 </div>
             </div>
         </div>
+    </div>
+</main>
 
-
-        </div>
-        <div class="card-footer" id="add-a-workout">
-            <a href="#" type="submit" class="card-footer-item">Add Workout</a> <br />
-            <a href="#" type="submit" class="card-footer-item">Add Another Workout</a> <br />
-            <a href="#" type="submit" class="card-footer-item">Workout Summary</a> <br />
-            <a href="/logout" id="logout-btn" class="card-footer-item">Logout</a>
-        </div>
-    </form>
 </div>
-
-
+<div class="card-footer" id="add-a-workout">
+    {{!--<a href="/addworkout" type="submit" class="card-footer-item">Add Workout</a> <br />
+    <a href="/view_workouts" type="submit" class="card-footer-item">Workout Summary</a> <br />--}}
+    <a href="/logout" id="logout-btn" class="card-footer-item">Logout</a>
+</div>
+</form>
+</div>

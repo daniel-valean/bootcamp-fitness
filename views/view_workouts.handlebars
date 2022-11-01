@@ -1,11 +1,12 @@
 {{!-- Main Content Container --}}
 <main id="view-workouts">
     <div id="container">
-        <div class="row mt-4">
+
+        <div class="mt-4">
             <h4 class="completed-workout-name">{{workout_date}} - {{category}}</h4>
 
-            <button class="delete-workout btn bye-btn" data-id="{{id}}"><i class="fas fa-trash-alt"></i> Delete
-                Workout</button>
+            {{!--<button class="delete-workout btn bye-btn" data-id="{{id}}"><i class="fas fa-trash-alt"></i> Delete
+                Workout</button>--}}
 
             <p class="mt-1">
                 <a class="btn" data-toggle="collapse" href="#workout-{{id}}" role="button" aria-expanded="false"
@@ -25,4 +26,13 @@
             <hr>
         </div>
     </div>
+    {{!--<div class="card-footer" id="add-a-workout">
+
+        <a href="/addworkout" type="submit" class="card-footer-item">Add Workout</a> <br />
+
+        <a href="/view_workouts" type="submit" class="card-footer-item">Workout Summary</a> <br />
+
+        {{!--<a href="/logout" type="submit" id="logout-btn" class="card-footer-item">Logout</a>--}}
+
+    </div>--}}
 </main>

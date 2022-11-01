@@ -65,29 +65,6 @@ $(document).ready(function () {
         });
     });
 
-    // Event Listener -> Delete workout buttons
-    $('.delete-workout').on('click', function (e) {
-        // Capture workout id
-        const id = $(e.target).attr('data-id');
-
-        // Send delete request back to API
-        $.ajax({
-            url: '/api/workouts',
-            method: 'DELETE',
-            headers: {
-                Accept: 'application/json',
-                'Content-type': 'application/json',
-            },
-            data: JSON.stringify({id: id}),
-            success: function (res) {
-                // If successful, reload the page to reflect the new status
-                location.reload('/view_workouts');
-            },
-            error: function () {
-                console.error('Error');
-            },
-        });
-    });
 
     // Helper -> Show alerts
     function showAlert(color, message) {

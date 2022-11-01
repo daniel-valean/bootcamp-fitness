@@ -1,26 +1,8 @@
-<div class="card">
-
-{{!-- Quotes html --}}
-    <div class="wrapper">
-      <div class="container">
-        <p id="quote">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
-          magni.
-        </p>
-        <h3 id="author">Lorem, ipsum.</h3>
-      </div>
-    </div>
-    <!-- Script -->
-    <script src="/public/js/login.js"></script>
-    <link rel="stylesheet" href="style.css" />
-
-
-
-    <img src="/assets/logo.png">
-{{!-- Login Container --}}
+<!--Login Card-->
 <div class="card" style="width: 400px;">
     <img src="assets/logo.png" class="card-img-top">
     <form id="login-form" class="card-body">
+
         <!--Email Input-->
         <div class="form-outline mb-4">
             <label for="email-login">Email:</label><br>
@@ -32,13 +14,28 @@
             <label for="password-login">Password:</label><br>
             <input class="form-input" type="password" id="password-login" />
         </div>
+        <!--End Password Input-->
+
+        <!--Login Button-->
         <div class="form-group">
             <button id="login-btn" class="btn btn-primary" type="submit">login</button>
         </div>
+        <!--End Login Button-->
         <br>
-
         <!--Sign-Up Button-->
-        <a href="/signup">Sign Up</a>
+        <div class="form-group">
+            <a href="/signup" class="btn btn-primary">No Account? Click Here</a>
+        </div> <br>
+        <!--End Sign Up Button-->
     </form>
+
+    <div class="wrapper">
+        <div class="container">
+            <p id="quote">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+                magni.
+            </p>
+            <h3 id="author">Lorem, ipsum.</h3>
+        </div>
+    </div>
 </div>
-</main>

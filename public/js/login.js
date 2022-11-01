@@ -8,39 +8,34 @@ const loginFormHandler = async (event) => {
 
     if (email && password) {
         // Send the e-mail and password to the server
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/userRoutes/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-Type': 'application/javascript'},
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/addworkout');
         } else {
             alert('Failed to log in');
         }
     }
 };
-
 document
     .querySelector('#login-btn')
     ?.addEventListener('click', loginFormHandler);
 
-
-    // -----------------------Quote JS
+//JavaScript for Motivational Quote on Login Page
 let quote = document.getElementById("quote");
 let author = document.getElementById("author");
 
-const url = "https://api.quotable.io/random";
-
 let getQuote = () => {
-  fetch(url)
-    .then((data) => data.json())
-    .then((item) => {
-      quote.innerText = item.content;
-      author.innerText = item.author;
-    });
+    fetch('https://api.quotable.io/random?tags=motivational')
+        .then((data) => data.json())
+        .then((item) => {
+            quote.innerText = item.content;
+            author.innerText = item.author;
+        });
 };
 
 window.addEventListener("load", getQuote);
-
