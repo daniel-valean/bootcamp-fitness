@@ -36,7 +36,13 @@ View a link of the video here!
 # Link
 
 View a link of deployed app to Heroku here!
-https://git.heroku.com/blooming-forest-36438.git
+https://git.heroku.com/blooming-forest-36438.com
+
+What does it look like? 
+
+![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.30.44%20PM.png)
+![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.45.08%20PM.png)
+![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.34.13%20PM.png)
 
 # Technology
 
