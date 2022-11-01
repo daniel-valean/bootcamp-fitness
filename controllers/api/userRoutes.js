@@ -48,7 +48,7 @@ router.get('/logout', (req, res) => {
     }
 });
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
     User.create({
         email: req.body.email,
         password: req.body.password
@@ -68,8 +68,6 @@ router.post('/', (req, res) => {
         });
 });
 
-router.get('/workouts', (req, res) => {
-  res.render('workout-completed');
-  });
+
 
 module.exports = router;

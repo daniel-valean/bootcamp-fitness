@@ -12,8 +12,8 @@ const signupFormHandler = async function (event) {
         headers: {"Content-Type": "application/json"}
     })
         .then(function (res) {
-            if (res.ok) {document.location.replace("/dashboard");}
-            else (alert("Password must be atleast 8 characters, 1 uppercase, and a symbol."))
+            if (res.ok) {document.location.replace("/login");}
+            else (alert("Password must be only 8 characters."))
         })
         .catch(err => console.log(err));
 };
