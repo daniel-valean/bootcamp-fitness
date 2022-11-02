@@ -36,7 +36,7 @@ View a link of the video here!
 # Link
 
 View a link of deployed app to Heroku here!
-https://git.heroku.com/blooming-forest-36438.com
+https://blooming-forest-36438.herokuapp.com/
 
 What does it look like? 
 
