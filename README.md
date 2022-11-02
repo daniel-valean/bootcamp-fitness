@@ -31,7 +31,8 @@ Once the user opens up Bootcamp Fitness they will be prompted to enter credentia
 
 # Demo
 
-View a link of the video here!
+View a live video demo here!
+https://drive.google.com/file/d/1G5IqoPgq3kiF_MEdA2tbK6JnfZgq6TTI/view
 
 # Link
 
