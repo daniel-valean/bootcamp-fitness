@@ -1,7 +1,7 @@
 //res render// 
 const router = require('express').Router();
 const {User, Workout} = require('../models');
-const {create} = require('../models/user');
+const {create} = require('../models/User');
 const withAuth = require('../utils/auth');
 const Sequelize = require('sequelize');
 
